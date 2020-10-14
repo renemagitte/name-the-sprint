@@ -2,7 +2,7 @@ const express = require('express');
 const app = new express();
 const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
-const dbConfig = require("./db.config.js");
+// const dbConfig = require("./db.config.js");
 
 // const connectionString = 'mongodb+srv://'+dbConfig.dbUserName+':'+dbConfig.dbPassword+'@cluster0.bcgup.gcp.mongodb.net';
 const connectionString = 'mongodb+srv://ida:ida123@cluster0.bcgup.gcp.mongodb.net';

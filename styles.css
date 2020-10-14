@@ -3,11 +3,24 @@ html, body {
     margin: 0 auto;
 }
 
+[v-cloak] {display: none}
+
 .content {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.sprint-stage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('assets/images/stage.jpg');
+    background-size: cover;
 }
 
 .wrapper {
@@ -19,37 +32,75 @@ html, body {
 
 
 .sprint-name {
-    font-family: 'Secular One', sans-serif;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
     font-size: 48px;
-    border: 1px solid red;
     min-height: 100px;
+    text-align: center;
+}
+
+.button-wrapper {
+    width: 100%;
+    text-align: center;
 }
 
 .button {
     display:inline-block;
-    padding:0.7em 1.4em;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.15em;
-    box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     text-transform:uppercase;
-    font-weight:400;
-    color:#FFFFFF;
-    background-color:#3369ff;
-    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
     text-align:center;
     position:relative;
-    width: 200px;
+    width: 320px;
+    height: 80px;
+
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
 }
 
-.button:active{
-    top:0.1em;
+.svg-icon-wrapper {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-@media all and (max-width:30em){
-    .button {
-        display:block;
-        margin:0.4em auto;
-    }
+.svg-icon {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 13px;
+    width: 18px;
+    color: white;
+    fill: white;
+    stroke: white;
+}
+
+.svg-icon--loading {
+    color: white;
+    fill: white;
+    stroke: white;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-name: spin-data;
+    animation-name: spin-data;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@keyframes spin-data {
+    0% { -webkit-transform:translateY(-50%) rotate(0deg); transform:translateY(-50%) rotate(0deg) } 
+    to { -webkit-transform:translateY(-50%) rotate(1turn); transform:translateY(-50%) rotate(1turn) }
 }
