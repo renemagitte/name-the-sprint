@@ -4,7 +4,8 @@ const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
 const dbConfig = require("./db.config.js");
 
-const connectionString = 'mongodb+srv://'+dbConfig.dbUserName+':'+dbConfig.dbPassword+'@cluster0.bcgup.gcp.mongodb.net';
+// const connectionString = 'mongodb+srv://'+dbConfig.dbUserName+':'+dbConfig.dbPassword+'@cluster0.bcgup.gcp.mongodb.net';
+const connectionString = 'mongodb+srv://ida:ida123@cluster0.bcgup.gcp.mongodb.net';
 
 app.use("/", express.static(__dirname + "/"));
 
@@ -36,4 +37,4 @@ app.get("/api/random-sprint-name", (req, res) => {
     .catch(error => console.error(error))
 })
 
-app.listen(process.env.port || 3000);
+app.listen(process.env.PORT || 3000);
